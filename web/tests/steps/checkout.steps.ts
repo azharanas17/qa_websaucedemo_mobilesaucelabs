@@ -4,7 +4,8 @@ import { CustomWorld } from '../world';
 
 When('the user proceeds to checkout', async function (this: CustomWorld) {
   await this.cartPage.checkout();
-  await this.page.waitForTimeout(1000);
+  await this.checkoutPage.firstName.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+  await this.page.waitForTimeout(300);
 });
 
 When(
@@ -16,6 +17,7 @@ When(
 
 When('the user continues to overview', async function (this: CustomWorld) {
   await this.checkoutPage.continue();
+  await this.page.waitForTimeout(300);
 });
 
 When('the user finishes the order', async function (this: CustomWorld) {

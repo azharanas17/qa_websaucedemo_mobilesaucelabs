@@ -22,8 +22,9 @@ Then('the cart badge should show {string}', async function (this: CustomWorld, c
 
 Then('the cart should contain {string}', async function (this: CustomWorld, name: string) {
   await this.page.waitForURL('**/cart.html');
+  await this.page.waitForTimeout(500);
   const names = await this.cartPage.getItemNames();
-  assert.ok(names.some((n) => n.includes(name)));
+  assert.ok(names.some((n) => n.includes(name)), `Expected cart to contain ${name}, got ${names}`);
 });
 
 Then('the cart should not contain {string}', async function (this: CustomWorld, name: string) {
