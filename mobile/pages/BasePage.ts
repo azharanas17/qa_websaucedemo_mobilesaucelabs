@@ -19,11 +19,12 @@ export class BasePage {
     const { width, height } = await this.driver.getWindowSize();
     await this.driver.execute('mobile: swipeGesture', {
       left: Math.floor(width * 0.1),
-      top: Math.floor(height * 0.15),
+      top: Math.floor(height * 0.6),
       width: Math.floor(width * 0.8),
-      height: Math.floor(height * 0.7),
+      height: Math.floor(height * 0.25),
       direction: 'up',
       percent: 1.0,
+      speed: 150,
     });
   }
 
