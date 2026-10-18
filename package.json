@@ -6,8 +6,13 @@
     "test:web": "cucumber-js",
     "test:web:login": "cucumber-js --profile login",
     "test:web:report": "cucumber-js --format json:reports/cucumber-report.json --format allure-cucumberjs/reporter ; node shared/utils/report-summary.cjs reports/cucumber-report.json $?",
+    "test:mobile": "cucumber-js --config mobile/cucumber.cjs",
+    "test:mobile:login": "cucumber-js --config mobile/cucumber.cjs --profile login",
+    "test:mobile:report": "cucumber-js --config mobile/cucumber.cjs --format json:reports/cucumber-mobile-report.json --format allure-cucumberjs/reporter ; node shared/utils/report-summary.cjs reports/cucumber-mobile-report.json $?",
     "report:allure": "allure generate allure-results --clean -o reports/allure-report",
-    "report:allure:open": "allure open reports/allure-report"
+    "report:allure:open": "allure open reports/allure-report",
+    "report:allure:combine": "allure generate allure-results --clean -o reports/allure-report-combined",
+    "appium:start": "appium --address 127.0.0.1 --port 4723"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +23,10 @@
     "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.5",
     "allure-cucumberjs": "^3.13.0",
+    "appium": "^2.19.0",
+    "appium-uiautomator2-driver": "^3.10.0",
     "playwright": "^1.64.1",
-    "tsx": "^4.23.15"
+    "tsx": "^4.23.15",
+    "webdriverio": "^8.46.0"
   }
 }

@@ -7,6 +7,13 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /allure-results/
+/allure-results-mobile/
 /allure-results-playwright/
 /reports/allure-report/
+/reports/allure-report-mobile/
+/reports/allure-report-combined/
 /reports/cucumber-report.json
+/reports/cucumber-mobile-report.json
+/reports/appium.log
+/reports/mobile-login.log
+/reports/mobile-full.log
