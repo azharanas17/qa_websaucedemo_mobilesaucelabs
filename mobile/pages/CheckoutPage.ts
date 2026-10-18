@@ -43,9 +43,11 @@ export class CheckoutPage extends BasePage {
   }
 
   async continueToOverview(): Promise<void> {
-    const el = await this.driver.$("//*[@content-desc='test-CONTINUE']");
-    await el.waitForExist({ timeout: 10000 });
-    await el.click();
+    await this.hideKeyboardIfVisible();
+    const selector = "//*[@content-desc='test-CONTINUE']";
+    await this.scrollIntoView(selector, { maxScrolls: 2 });
+    const element = await this.driver.$(selector);
+    await element.click();
   }
 
   async finish(): Promise<void> {

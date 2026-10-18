@@ -15,18 +15,16 @@ export class CartPage extends BasePage {
   }
 
   async continueShopping(): Promise<void> {
-    const el = await this.driver.$("//*[@content-desc='test-CONTINUE SHOPPING']");
-    await el.waitForExist({ timeout: 10000 });
-    await el.click();
+    const selector = "//*[@content-desc='test-CONTINUE SHOPPING']";
+    await this.scrollIntoView(selector);
+    const element = await this.driver.$(selector);
+    await element.click();
   }
 
   async proceedToCheckout(): Promise<void> {
-    const el = await this.driver.$("//*[@content-desc='test-CHECKOUT']");
-    await el.waitForExist({ timeout: 10000 });
-    if (!(await el.isDisplayed().catch(() => false))) {
-      await this.swipeUp();
-      await this.driver.pause(500);
-    }
-    await el.click();
+    const selector = "//*[@content-desc='test-CHECKOUT']";
+    await this.scrollIntoView(selector);
+    const element = await this.driver.$(selector);
+    await element.click();
   }
 }

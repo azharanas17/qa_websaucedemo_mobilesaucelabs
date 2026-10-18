@@ -15,5 +15,6 @@ node_modules/
 /reports/cucumber-report.json
 /reports/cucumber-mobile-report.json
 /reports/appium.log
+/reports/allure-formatter.log
 /reports/mobile-login.log
 /reports/mobile-full.log

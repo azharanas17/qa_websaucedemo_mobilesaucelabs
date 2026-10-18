@@ -6,7 +6,7 @@ module.exports = {
     format: [
       'progress',
       ['json', 'reports/cucumber-mobile-report.json'],
-      ['allure-cucumberjs/reporter'],
+      ['allure-cucumberjs/reporter', 'reports/allure-formatter.log'],
     ],
     formatOptions: {
       resultsDir: 'allure-results-mobile',
@@ -21,7 +21,7 @@ module.exports = {
     format: [
       'progress',
       ['json', 'reports/cucumber-mobile-report.json'],
-      ['allure-cucumberjs/reporter'],
+      ['allure-cucumberjs/reporter', 'reports/allure-formatter.log'],
     ],
     formatOptions: {
       resultsDir: 'allure-results-mobile',
