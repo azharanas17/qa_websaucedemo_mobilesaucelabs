@@ -24,7 +24,7 @@ Cucumber + TypeScript, Playwright (web) and Appium (mobile), with Allure reporti
 ### Mobile prerequisites
 - Node.js v22 (this repo was validated on v22.3.0)
 - Java 17
-- Android SDK, e.g. `/Users/naz/Library/Android/sdk`
+- Android SDK
 - An Android Virtual Device (AVD). This repo was used with `Medium_Phone_API_36`
 - Appium (installed locally as a devDependency) and the UiAutomator2 driver
 
