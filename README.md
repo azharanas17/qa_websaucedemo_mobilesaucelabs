@@ -1,4 +1,4 @@
-# QA Engineer Assignment - HMsampoerna
+# QA Engineer Task
 
 BDD test automation for the Sauce Labs sample Web and Mobile applications using
 Cucumber + TypeScript, Playwright (web) and Appium (mobile), with Allure reporting.
